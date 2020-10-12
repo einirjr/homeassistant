@@ -1,0 +1,40 @@
+- id: '1602467695537'
+  alias: Kveikja ljós í forstofu
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: e06695130c2c11eba7841d160ecfc3bf
+    entity_id: binary_sensor.forstofa_hreyfiskynjari
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 90353512ff7011ea9eb43b3c43a8013c
+    entity_id: switch.forstofa_ljos
+    domain: switch
+  mode: single
+- id: '1602468561310'
+  alias: Slökkva ljós í forstofu
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: e06695130c2c11eba7841d160ecfc3bf
+    entity_id: binary_sensor.forstofa_hreyfiskynjari
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 90353512ff7011ea9eb43b3c43a8013c
+    entity_id: switch.forstofa_ljos
+    domain: switch
+  mode: single
