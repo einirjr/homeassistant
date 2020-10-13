@@ -123,17 +123,45 @@
                             ]
                         },
                         {
-                            "type": "media-control",
-                            "entity": "media_player.shield",
-                            "name": "TV"
-                        },
-                        {
-                            "type": "media-control",
-                            "entity": "media_player.bedroom_tv"
-                        },
-                        {
-                            "type": "weather-forecast",
-                            "entity": "weather.alalaekur_15"
+                            "type": "custom:mini-graph-card",
+                            "name": "Hitastig inni (24klst)",
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "height": 300,
+                            "24hour": true,
+                            "show": {
+                                "labels": true
+                            },
+                            "entities": [
+                                {
+                                    "entity": "sensor.stofa_temperature",
+                                    "name": "Stofa"
+                                },
+                                {
+                                    "entity": "sensor.elena_rut_temperature",
+                                    "name": "Elena Rut"
+                                },
+                                {
+                                    "entity": "sensor.mia_maria_temperature",
+                                    "name": "M\u00eda Mar\u00eda"
+                                },
+                                {
+                                    "entity": "sensor.svefnherbergi_temperature",
+                                    "name": "Svefn\u00f3"
+                                },
+                                {
+                                    "entity": "sensor.geymsla_temperature",
+                                    "name": "Geymsla"
+                                },
+                                {
+                                    "entity": "sensor.bad",
+                                    "name": "Ba\u00f0"
+                                },
+                                {
+                                    "entity": "sensor.thvottahus",
+                                    "name": "\u00devottah\u00fas"
+                                }
+                            ]
                         },
                         {
                             "title": "\u00dati",
@@ -169,6 +197,123 @@
                                     "font_size": 75
                                 }
                             ]
+                        },
+                        {
+                            "type": "custom:mini-graph-card",
+                            "name": "Rakastig inni (24klst)",
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "height": 300,
+                            "24hour": true,
+                            "show": {
+                                "labels": true
+                            },
+                            "entities": [
+                                {
+                                    "entity": "sensor.stofa_humidity",
+                                    "name": "Stofa"
+                                },
+                                {
+                                    "entity": "sensor.elena_rut_humidity",
+                                    "name": "Elena Rut"
+                                },
+                                {
+                                    "entity": "sensor.mia_maria_humidity",
+                                    "name": "M\u00eda Mar\u00eda"
+                                },
+                                {
+                                    "entity": "sensor.svefnherbergi_humidity",
+                                    "name": "Svefn\u00f3"
+                                },
+                                {
+                                    "entity": "sensor.geymsla_humidity",
+                                    "name": "Geymsla"
+                                },
+                                {
+                                    "entity": "sensor.bad_2",
+                                    "name": "Ba\u00f0"
+                                },
+                                {
+                                    "entity": "sensor.thvottahus_2",
+                                    "name": "\u00devottah\u00fas"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "weather-forecast",
+                            "entity": "weather.alalaekur_15"
+                        },
+                        {
+                            "type": "custom:battery-state-card",
+                            "color_gradient": [
+                                "#ff0000",
+                                "#ffff00",
+                                "#00ff00"
+                            ],
+                            "entities": [
+                                {
+                                    "entity": "sensor.stofa_battery",
+                                    "name": "Stofa"
+                                },
+                                {
+                                    "entity": "sensor.elena_rut_battery",
+                                    "name": "Elena Rut"
+                                },
+                                {
+                                    "entity": "sensor.mia_maria_battery",
+                                    "name": "M\u00eda Mar\u00eda"
+                                },
+                                {
+                                    "entity": "sensor.svefnherbergi_battery",
+                                    "name": "Svefn\u00f3"
+                                },
+                                {
+                                    "entity": "sensor.geymsla_battery",
+                                    "name": "Geymsla"
+                                },
+                                {
+                                    "entity": "sensor.bad_battery_level",
+                                    "name": "Ba\u00f0"
+                                },
+                                {
+                                    "entity": "sensor.thvottahus_battery_level",
+                                    "name": "\u00devottah\u00fas"
+                                },
+                                {
+                                    "entity": "sensor.svalir_battery_level",
+                                    "name": "Svalir"
+                                },
+                                {
+                                    "entity": "sensor.elena_sveppalampi_switch",
+                                    "name": "Sveppalampi (rofi)"
+                                },
+                                {
+                                    "entity": "sensor.fan_switch",
+                                    "name": "Vifta (rofi)"
+                                },
+                                {
+                                    "entity": "sensor.kitchen_light_remote",
+                                    "name": "Eldh\u00faslj\u00f3s (rofi)"
+                                },
+                                {
+                                    "entity": "sensor.lamp_remote",
+                                    "name": "Stofulampi (rofi)"
+                                },
+                                {
+                                    "entity": "sensor.forstofa_hreyfiskynjari_battery_level",
+                                    "name": "Forstofa (hreyfiskynjari)"
+                                }
+                            ],
+                            "title": "Batter\u00edsta\u00f0a (nemar & rofar)"
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.shield",
+                            "name": "TV"
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.bedroom_tv"
                         }
                     ]
                 }

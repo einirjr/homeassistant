@@ -1,6 +1,6 @@
 - platform: mitemp_bt
   mac: '58:2D:34:30:F7:22'
-  name: Kids Room Temp
+  name: Geymsla
   force_update: true
   median: 1
   monitored_conditions:
@@ -9,7 +9,7 @@
     - battery
 - platform: mitemp_bt
   mac: '58:2D:34:30:E4:57'
-  name: Stofa?
+  name: Stofa
   force_update: true
   median: 1
   monitored_conditions:
@@ -18,7 +18,7 @@
     - battery
 - platform: mitemp_bt
   mac: '58:2D:34:31:9F:D7'
-  name: Elena?
+  name: Elena Rut
   force_update: true
   median: 1
   monitored_conditions:
@@ -27,7 +27,7 @@
     - battery
 - platform: mitemp_bt
   mac: '58:2D:34:30:E5:17'
-  name: Mía?
+  name: Svefnherbergi
   force_update: true
   median: 1
   monitored_conditions:
@@ -36,7 +36,7 @@
     - battery
 - platform: mitemp_bt
   mac: '58:2D:34:31:A8:D2'
-  name: Svefnó?
+  name: Mía María
   force_update: true
   median: 1
   monitored_conditions:

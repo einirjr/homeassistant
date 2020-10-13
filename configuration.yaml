@@ -8,8 +8,16 @@ tts:
 
 shelly:
 
+influxdb:
+  host: localhost
+  database: home_assistant
+  username: !secret influxdb_username
+  password: !secret influxdb_password
+  max_retries: 3
+  default_measurement: state
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-sensor: !include sensor.yaml
+sensor: !include sensors.yaml

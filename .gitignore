@@ -1,7 +1,7 @@
-.HA_VERSION
-.storage/
 *.db*
 *.log
+.HA_VERSION
+.storage/
 /themes/
 /tts/
 /www/
