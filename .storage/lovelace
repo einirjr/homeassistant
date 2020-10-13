@@ -1,0 +1,178 @@
+{
+    "version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "\u00c1lal\u00e6kur 15",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "badges": null,
+                    "cards": [
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "name": "Eldh\u00fas Vinnulj\u00f3s",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.eldhus_vinnuljos"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.eldhusbord",
+                                    "name": "Eldh\u00fasbor\u00f0",
+                                    "icon": "mdi:globe-light"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.forstofa_ljos",
+                                    "name": "Forstofa",
+                                    "icon": "mdi:dome-light",
+                                    "show_state": false
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.gangur_ljos",
+                                    "name": "Gangur",
+                                    "icon": "mdi:ceiling-light"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "light",
+                                    "entity": "light.stofa_dimmer",
+                                    "name": "Stofa"
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.lamp",
+                                    "name": "Stofulampi",
+                                    "icon": "mdi:floor-lamp"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "light",
+                                    "entity": "light.elena_dimmer",
+                                    "name": "Elena Rut",
+                                    "icon": "mdi:lightbulb"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.elena_sveppalampi",
+                                    "name": "Sveppalampi",
+                                    "icon": "hass:lamp",
+                                    "icon_height": "102px"
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.mia_dimmer",
+                                    "name": "M\u00eda Mar\u00eda"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.geymsla_ljos",
+                                    "icon": "hass:lightbulb",
+                                    "name": "Geymsla"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.fan",
+                                    "icon": "hass:fan",
+                                    "name": "Vifta"
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.lampi_svefno",
+                                    "name": "Svefn\u00f3 lampi",
+                                    "icon": "hass:lamp"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.shield",
+                            "name": "TV"
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.bedroom_tv"
+                        },
+                        {
+                            "type": "weather-forecast",
+                            "entity": "weather.alalaekur_15"
+                        },
+                        {
+                            "title": "\u00dati",
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.svalir"
+                                    ],
+                                    "line_color": "blue",
+                                    "line_width": 8,
+                                    "font_size": 75,
+                                    "name": "Hitastig"
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.svalir_2"
+                                    ],
+                                    "name": "Rakastig",
+                                    "line_color": "#e74c3c",
+                                    "line_width": 8,
+                                    "font_size": 75
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.svalir_3"
+                                    ],
+                                    "name": "Loft\u00fer\u00fdstingur",
+                                    "line_width": 8,
+                                    "font_size": 75
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
