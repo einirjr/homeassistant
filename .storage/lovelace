@@ -22,11 +22,8 @@
                                     "entity": "switch.eldhus_vinnuljos"
                                 },
                                 {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "group.eldhusbord",
+                                    "type": "light",
+                                    "entity": "light.eldhusbord",
                                     "name": "Eldh\u00fasbor\u00f0",
                                     "icon": "mdi:globe-light"
                                 },
@@ -39,15 +36,6 @@
                                     "name": "Forstofa",
                                     "icon": "mdi:dome-light",
                                     "show_state": false
-                                },
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "switch.gangur_ljos",
-                                    "name": "Gangur",
-                                    "icon": "mdi:ceiling-light"
                                 }
                             ]
                         },
@@ -64,6 +52,15 @@
                                     "entity": "light.lamp",
                                     "name": "Stofulampi",
                                     "icon": "mdi:floor-lamp"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.gangur_ljos",
+                                    "name": "Gangur",
+                                    "icon": "mdi:ceiling-light"
                                 }
                             ]
                         },
@@ -123,47 +120,6 @@
                             ]
                         },
                         {
-                            "type": "custom:mini-graph-card",
-                            "name": "Hitastig inni (24klst)",
-                            "hours_to_show": 24,
-                            "refresh_interval": 0,
-                            "height": 300,
-                            "24hour": true,
-                            "show": {
-                                "labels": true
-                            },
-                            "entities": [
-                                {
-                                    "entity": "sensor.stofa_temperature",
-                                    "name": "Stofa"
-                                },
-                                {
-                                    "entity": "sensor.elena_rut_temperature",
-                                    "name": "Elena Rut"
-                                },
-                                {
-                                    "entity": "sensor.mia_maria_temperature",
-                                    "name": "M\u00eda Mar\u00eda"
-                                },
-                                {
-                                    "entity": "sensor.svefnherbergi_temperature",
-                                    "name": "Svefn\u00f3"
-                                },
-                                {
-                                    "entity": "sensor.geymsla_temperature",
-                                    "name": "Geymsla"
-                                },
-                                {
-                                    "entity": "sensor.bad",
-                                    "name": "Ba\u00f0"
-                                },
-                                {
-                                    "entity": "sensor.thvottahus",
-                                    "name": "\u00devottah\u00fas"
-                                }
-                            ]
-                        },
-                        {
                             "title": "\u00dati",
                             "type": "horizontal-stack",
                             "cards": [
@@ -200,6 +156,47 @@
                         },
                         {
                             "type": "custom:mini-graph-card",
+                            "name": "Hitastig inni (24klst)",
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "height": 300,
+                            "24hour": true,
+                            "show": {
+                                "labels": true
+                            },
+                            "entities": [
+                                {
+                                    "entity": "sensor.temperature_stofa",
+                                    "name": "Stofa"
+                                },
+                                {
+                                    "entity": "sensor.temperature_elenarut",
+                                    "name": "Elena Rut"
+                                },
+                                {
+                                    "entity": "sensor.temperature_miamaria",
+                                    "name": "M\u00eda Mar\u00eda"
+                                },
+                                {
+                                    "entity": "sensor.temperature_svefno",
+                                    "name": "Svefn\u00f3"
+                                },
+                                {
+                                    "entity": "sensor.temperature_geymsla",
+                                    "name": "Geymsla"
+                                },
+                                {
+                                    "entity": "sensor.bad",
+                                    "name": "Ba\u00f0"
+                                },
+                                {
+                                    "entity": "sensor.thvottahus",
+                                    "name": "\u00devottah\u00fas"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "custom:mini-graph-card",
                             "name": "Rakastig inni (24klst)",
                             "hours_to_show": 24,
                             "refresh_interval": 0,
@@ -210,23 +207,23 @@
                             },
                             "entities": [
                                 {
-                                    "entity": "sensor.stofa_humidity",
+                                    "entity": "sensor.humidity_stofa",
                                     "name": "Stofa"
                                 },
                                 {
-                                    "entity": "sensor.elena_rut_humidity",
+                                    "entity": "sensor.humidity_elenarut",
                                     "name": "Elena Rut"
                                 },
                                 {
-                                    "entity": "sensor.mia_maria_humidity",
+                                    "entity": "sensor.humidity_miamaria",
                                     "name": "M\u00eda Mar\u00eda"
                                 },
                                 {
-                                    "entity": "sensor.svefnherbergi_humidity",
+                                    "entity": "sensor.humidity_svefno",
                                     "name": "Svefn\u00f3"
                                 },
                                 {
-                                    "entity": "sensor.geymsla_humidity",
+                                    "entity": "sensor.humidity_geymsla",
                                     "name": "Geymsla"
                                 },
                                 {
@@ -252,23 +249,23 @@
                             ],
                             "entities": [
                                 {
-                                    "entity": "sensor.stofa_battery",
+                                    "entity": "sensor.battery_stofa",
                                     "name": "Stofa"
                                 },
                                 {
-                                    "entity": "sensor.elena_rut_battery",
+                                    "entity": "sensor.battery_elenarut",
                                     "name": "Elena Rut"
                                 },
                                 {
-                                    "entity": "sensor.mia_maria_battery",
+                                    "entity": "sensor.battery_miamaria",
                                     "name": "M\u00eda Mar\u00eda"
                                 },
                                 {
-                                    "entity": "sensor.svefnherbergi_battery",
+                                    "entity": "sensor.battery_svefno",
                                     "name": "Svefn\u00f3"
                                 },
                                 {
-                                    "entity": "sensor.geymsla_battery",
+                                    "entity": "sensor.battery_geymsla",
                                     "name": "Geymsla"
                                 },
                                 {
@@ -308,8 +305,8 @@
                         },
                         {
                             "type": "media-control",
-                            "entity": "media_player.shield",
-                            "name": "TV"
+                            "entity": "media_player.tv_stofa",
+                            "name": "TV (Stofa)"
                         },
                         {
                             "type": "media-control",

@@ -6,6 +6,27 @@ default_config:
 tts:
   - platform: google_translate
 
+# logger:
+#   default: warn
+#   logs:
+#     custom_components.mitemp_bt: debug
+
+media_player:
+  - platform: androidtv
+    name: TV (Stofa)
+    host: 10.0.0.5
+  - platform: androidtv
+    name: TV (Svefnó)
+    host: 10.0.0.7
+
+light:
+  - platform: group
+    name: Eldhúsborð
+    entities:
+      - light.kitchen_bulb_1
+      - light.kitchen_bulb_2
+      - light.kitchen_bulb_3
+
 shelly:
 
 influxdb:
