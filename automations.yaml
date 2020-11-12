@@ -11,11 +11,14 @@
       hours: 0
       minutes: 0
       seconds: 0
-  condition: []
+  condition:
+  - condition: time
+    after: '7:00'
+    before: '22:00'
   action:
   - type: turn_on
-    device_id: 90353512ff7011ea9eb43b3c43a8013c
-    entity_id: switch.forstofa_ljos
+    device_id: 46de38061f6b11eb876355d2445a994b
+    entity_id: switch.shelly_shsw_1_8caab50562b4
     domain: switch
   mode: single
 - id: '1602468561310'
@@ -29,12 +32,12 @@
     domain: binary_sensor
     for:
       hours: 0
-      minutes: 5
+      minutes: 2
       seconds: 0
   condition: []
   action:
   - type: turn_off
-    device_id: 90353512ff7011ea9eb43b3c43a8013c
-    entity_id: switch.forstofa_ljos
+    device_id: 46de38061f6b11eb876355d2445a994b
+    entity_id: switch.shelly_shsw_1_8caab50562b4
     domain: switch
   mode: single

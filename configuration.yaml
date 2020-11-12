@@ -15,17 +15,25 @@ media_player:
   - platform: androidtv
     name: TV (Stofa)
     host: 10.0.0.5
-  - platform: androidtv
-    name: TV (Svefnó)
-    host: 10.0.0.7
+#  - platform: androidtv
+#    name: TV (Svefnó)
+#    host: 10.0.0.7
 
 light:
   - platform: group
     name: Eldhúsborð
     entities:
-      - light.kitchen_bulb_1
-      - light.kitchen_bulb_2
-      - light.kitchen_bulb_3
+      - light.eldhusbord_bulb1
+      - light.eldhusbord_bulb2
+      - light.eldhusbord_bulb3
+
+yeelight:
+  devices:
+    10.0.0.91:
+      name: Baðspegill
+      transition: 1000
+      use_music_mode: true
+      save_on_change: true
 
 shelly:
 
@@ -41,4 +49,4 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-sensor: !include sensors.yaml
+sensor: !include_dir_merge_list sensors/

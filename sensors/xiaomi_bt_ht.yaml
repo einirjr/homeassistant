@@ -1,0 +1,9 @@
+- platform: mitemp_bt
+  period: 60
+  batt_entities: true
+  sensor_names:
+    '58:2D:34:30:E4:57': 'Stofa'
+    '58:2D:34:31:9F:D7': 'Elena Rut'
+    '58:2D:34:31:A8:D2': 'Mía María'
+    '58:2D:34:30:E5:17': 'Svefnó'
+    '58:2D:34:30:F7:22': 'Geymsla'
