@@ -1,5 +1,5 @@
 - id: '1602467695537'
-  alias: Kveikja ljós í forstofu
+  alias: Forstofa - kveikja ljós
   description: ''
   trigger:
   - type: motion
@@ -22,7 +22,7 @@
     domain: switch
   mode: single
 - id: '1602468561310'
-  alias: Slökkva ljós í forstofu
+  alias: Forstofa - slökkva ljós
   description: ''
   trigger:
   - type: no_motion
@@ -40,4 +40,61 @@
     device_id: 46de38061f6b11eb876355d2445a994b
     entity_id: switch.shelly_shsw_1_8caab50562b4
     domain: switch
+  mode: single
+- id: '1607023468894'
+  alias: Bað - kveikja á spegli
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 19213720bc3e7d2928017856d29e0857
+    entity_id: binary_sensor.presence_23
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: turn_on
+    device_id: e433428f1b0611ebb340adcf8db30b90
+    entity_id: light.badspegill
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1607023989141'
+  alias: Bað - slökkva á spegli
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: 19213720bc3e7d2928017856d29e0857
+    entity_id: binary_sensor.presence_23
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 8
+      seconds: 0
+  condition: []
+  action:
+  - type: turn_off
+    device_id: e433428f1b0611ebb340adcf8db30b90
+    entity_id: light.badspegill
+    domain: light
+  mode: single
+- id: '1607039717996'
+  alias: Geymsla - Frystir gleymdist opinn
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 1151cee928f9e7aba97117c1a005090d
+    entity_id: binary_sensor.openclose_24
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: Frystir opinn!
+      message: Hver á að loka frystinum? Á ÉG AÐ GERA ÞAÐ?
   mode: single

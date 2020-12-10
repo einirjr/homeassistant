@@ -35,8 +35,6 @@ yeelight:
       use_music_mode: true
       save_on_change: true
 
-shelly:
-
 influxdb:
   host: localhost
   database: home_assistant
@@ -50,3 +48,4 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include_dir_merge_list sensors/
+shelly: !include shellies.yaml

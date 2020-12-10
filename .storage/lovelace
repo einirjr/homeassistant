@@ -227,7 +227,13 @@
                         {
                             "type": "entities",
                             "entities": [
-                                "binary_sensor.svalir_hurdaskynjari"
+                                {
+                                    "entity": "binary_sensor.svalir_hurdaskynjari"
+                                },
+                                {
+                                    "entity": "binary_sensor.openclose_24",
+                                    "icon": "mdi:snowflake"
+                                }
                             ]
                         },
                         {
@@ -279,20 +285,149 @@
                                     "name": "Stofulampi (rofi)"
                                 },
                                 {
+                                    "entity": "sensor.vifta_remote_battery_level",
+                                    "name": "Vifta (rofi)"
+                                },
+                                {
                                     "entity": "sensor.forstofa_hreyfiskynjari_battery_level",
                                     "name": "Forstofa (hreyfiskynjari)"
+                                },
+                                {
+                                    "entity": "sensor.lightlevel_22_battery_level",
+                                    "name": "Ba\u00f0 (hreyfiskynjari)"
+                                },
+                                {
+                                    "entity": "sensor.svalahurd_battery_level",
+                                    "name": "Svalahur\u00f0 (hur\u00f0askynjari)"
+                                },
+                                {
+                                    "entity": "sensor.openclose_24_battery_level",
+                                    "name": "Frystir geymsla (hur\u00f0askynjari)"
                                 }
                             ],
                             "title": "Batter\u00edsta\u00f0a (nemar & rofar)"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.shelly_shsw_1_8caab50562b4_rssi",
+                                    "name": "Forstofa"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shsw_1_e098068cebbf_rssi",
+                                    "name": "Eldh\u00fas"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shdm_1_d0df53_rssi",
+                                    "name": "Stofa (dimmer)"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shsw_1_8caab50615bc_rssi",
+                                    "name": "Gangur"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shdm_1_d0e099_rssi",
+                                    "name": "Elena Rut"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shdm_1_d0e25b_rssi",
+                                    "name": "M\u00eda Mar\u00eda"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shdm_1_d0df21_rssi",
+                                    "name": "Lampi svefn\u00f3"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shsw_1_e098068cea6d_rssi",
+                                    "name": "Geymsla"
+                                }
+                            ],
+                            "title": "Shelly - WiFi styrkur"
                         }
                     ]
                 },
                 {
-                    "title": "Ve\u00f0ur",
+                    "title": "Ve\u00f0ur & f\u00e6r\u00f0",
                     "path": "vedur",
-                    "icon": "hass:weather-windy",
+                    "icon": "hass:weather-snowy",
                     "badges": [],
                     "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "glance",
+                                    "title": "Hellishei\u00f0i",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.hellisheidi_hitastig"
+                                        },
+                                        {
+                                            "entity": "sensor.hellisheidi_veghiti",
+                                            "icon": "hass:road-variant"
+                                        },
+                                        {
+                                            "entity": "sensor.hellisheidi_snjodypt",
+                                            "icon": "mdi:snowflake"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "picture",
+                                            "image": "https://www.vegagerdin.is/vgdata/vefmyndavelar/kambar_brekka_1.jpg"
+                                        },
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "image": "https://www.vegagerdin.is/vgdata/vefmyndavelar/hellisheidi_2.jpg"
+                                                },
+                                                {
+                                                    "type": "picture",
+                                                    "image": "https://www.vegagerdin.is/vgdata/vefmyndavelar/hellisheidi_1.jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "image": "https://www.vegagerdin.is/vgdata/vefmyndavelar/hveradalir_1.jpg"
+                                                },
+                                                {
+                                                    "type": "picture",
+                                                    "image": "https://www.vegagerdin.is/vgdata/vefmyndavelar/hveradalir_2.jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "image": "https://www.vegagerdin.is/vgdata/vefmyndavelar/threngslavegamot_1.jpg"
+                                                },
+                                                {
+                                                    "type": "picture",
+                                                    "image": "https://www.vegagerdin.is/vgdata/vefmyndavelar/sandskeid_3.jpg"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "iframe",
+                            "url": "https://embed.windy.com/embed2.html?lat=63.739&lon=-21.193&detailLat=64.094&detailLon=-21.577&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=m%2Fs&metricTemp=%C2%B0C&radarRange=-1",
+                            "aspect_ratio": "90%"
+                        },
                         {
                             "type": "weather-forecast",
                             "entity": "weather.alalaekur_15"
@@ -331,28 +466,6 @@
                                     "font_size": 75
                                 }
                             ]
-                        },
-                        {
-                            "type": "iframe",
-                            "url": "https://embed.windy.com/embed2.html?lat=63.739&lon=-21.193&detailLat=64.094&detailLon=-21.577&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=m%2Fs&metricTemp=%C2%B0C&radarRange=-1",
-                            "aspect_ratio": "90%"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.hellisheidi_hitastig"
-                                },
-                                {
-                                    "entity": "sensor.hellisheidi_veghiti",
-                                    "icon": "hass:road-variant"
-                                },
-                                {
-                                    "entity": "sensor.hellisheidi_snjodypt",
-                                    "icon": "mdi:snowflake"
-                                }
-                            ],
-                            "title": "Hei\u00f0in"
                         }
                     ]
                 }

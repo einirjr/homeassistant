@@ -1,0 +1,21 @@
+discovery: true
+sensors:
+  - rssi
+  - uptime
+
+# Forstofa
+# Shelly 1 - 8CAAB50562B4
+# Gangur
+# Shelly 1 - 8CAAB50615BC
+# Geymsla
+# Shelly 1 - E098068CEA6D
+# Eldhús vinnuljós
+# Shelly 1 - E098068CEBBF
+# Lampi svefnó
+# Shelly Dimmer - D0DF21
+# Stofa
+# Shelly Dimmer - D0DF53
+# Elena Rut
+# Shelly Dimmer - D0E099
+# Mía María
+# Shelly Dimmer - D0E25B
