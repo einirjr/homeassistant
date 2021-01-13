@@ -1,0 +1,10 @@
+- platform: netgear
+  host: 10.0.0.2
+  port: 80
+  username: !secret orbi_username
+  password: !secret orbi_password
+  accesspoints:
+    - '38:94:ED:C7:46:F6'
+  devices:
+    - '4C:49:E3:D7:9D:DF'
+    - '66:CF:96:5E:67:5E'

@@ -1,0 +1,28 @@
+
+4c_49_e3_d7_9d_df:
+  name: 4c_49_e3_d7_9d_df
+  mac: 4C:49:E3:D7:9D:DF
+  icon:
+  picture:
+  track: true
+
+mi_6_on_router:
+  name: Mi 6 on Router
+  mac: 4C:49:E3:D7:9D:DF_38:94:ED:C7:46:F6
+  icon:
+  picture:
+  track: true
+
+dev_5e_67_5e:
+  name: DEV-5E:67:5E
+  mac: 66:CF:96:5E:67:5E
+  icon:
+  picture:
+  track: true
+
+dev_5e_67_5e_on_router:
+  name: DEV-5E:67:5E on Router
+  mac: 66:CF:96:5E:67:5E_38:94:ED:C7:46:F6
+  icon:
+  picture:
+  track: true

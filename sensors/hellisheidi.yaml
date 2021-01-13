@@ -38,24 +38,3 @@
       friendly_name: "Veghiti"
       value_template: '{{ states.sensor.imo_hellisheidi.attributes["RTE"] }}'
       unit_of_measurement: '°C'
-    hellisheidi_snjor:
-      friendly_name: "Lýsing á snjó"
-      value_template: '{{ states.sensor.imo_hellisheidi.attributes["SNC"] }}'
-    hellisheidi_snjodypt:
-      friendly_name: "Snjódýpt"
-      value_template: > 
-        {% if state_attr('states.sensor.imo_hellisheidi', 'SND') == None %}
-          0
-        {% else %}
-          {{ state_attr('states.sensor.imo_hellisheidi', 'SND') }}
-        {% endif %}
-      unit_of_measurement: 'cm'
-    hellisheidi_skyggni:
-      friendly_name: "Skyggni"
-      value_template: >
-        {% if state_attr('states.sensor.imo_hellisheidi', 'V') == None %}
-          10+
-        {% else %}
-          '{{ state_attr('states.sensor.imo_hellisheidi', 'V') }}'
-        {% endif %}
-      unit_of_measurement: 'km'

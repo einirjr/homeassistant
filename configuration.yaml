@@ -19,13 +19,10 @@ media_player:
 #    name: TV (Svefnó)
 #    host: 10.0.0.7
 
-light:
-  - platform: group
-    name: Eldhúsborð
-    entities:
-      - light.eldhusbord_bulb1
-      - light.eldhusbord_bulb2
-      - light.eldhusbord_bulb3
+samsungtv:
+  - host: 10.0.0.6
+
+
 
 yeelight:
   devices:
@@ -43,9 +40,13 @@ influxdb:
   max_retries: 3
   default_measurement: state
 
-group: !include groups.yaml
+light: !include lights.yaml
+device_tracker: !include devices.yaml
 automation: !include automations.yaml
+shelly: !include shellies.yaml
+ble_monitor: !include xiaomi_ble_sensors.yaml
+sensor: !include_dir_merge_list sensors/
+
+group: !include groups.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-sensor: !include_dir_merge_list sensors/
-shelly: !include shellies.yaml

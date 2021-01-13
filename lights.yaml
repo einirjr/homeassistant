@@ -1,0 +1,6 @@
+- platform: group
+  name: Eldhúsborð
+  entities:
+    - light.eldhusbord_bulb1
+    - light.eldhusbord_bulb2
+    - light.eldhusbord_bulb3

@@ -9,7 +9,16 @@
                     "path": "default_view",
                     "title": "Takkastj\u00f3rn",
                     "icon": "hass:light-switch",
-                    "badges": [],
+                    "badges": [
+                        {
+                            "entity": "device_tracker.4c_49_e3_d7_9d_df",
+                            "name": "Einir"
+                        },
+                        {
+                            "entity": "device_tracker.dev_5e_67_5e",
+                            "name": "Thelma Rut"
+                        }
+                    ],
                     "cards": [
                         {
                             "type": "horizontal-stack",
@@ -35,8 +44,8 @@
                                     "tap_action": {
                                         "action": "toggle"
                                     },
-                                    "entity": "switch.shelly_shsw_1_8caab50562b4",
-                                    "name": "Forstofa",
+                                    "entity": "switch.shelly_shsw_pm_84cca8a8503e",
+                                    "name": "Sk\u00e1palj\u00f3s",
                                     "icon": "mdi:dome-light",
                                     "show_state": false
                                 }
@@ -46,25 +55,25 @@
                             "type": "horizontal-stack",
                             "cards": [
                                 {
-                                    "type": "light",
-                                    "entity": "light.shelly_shdm_1_d0df53",
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.shelly_shsw_1_8caab50562b4",
+                                    "icon": "hass:dome-light"
+                                },
+                                {
+                                    "type": "button",
                                     "name": "Stofa",
-                                    "icon": "mdi:dome-light"
+                                    "icon": "mdi:dome-light",
+                                    "entity": "switch.shelly_shsw_pm_f4cfa2e37e84",
+                                    "show_state": false
                                 },
                                 {
                                     "type": "light",
                                     "entity": "light.stofulampi",
                                     "name": "Stofulampi",
                                     "icon": "mdi:floor-lamp"
-                                },
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "switch.shelly_shsw_1_8caab50615bc",
-                                    "name": "Gangur",
-                                    "icon": "mdi:dome-light"
                                 }
                             ]
                         },
@@ -72,9 +81,9 @@
                             "type": "horizontal-stack",
                             "cards": [
                                 {
-                                    "type": "light",
-                                    "entity": "light.shelly_shdm_1_d0e099",
-                                    "name": "Elena Rut",
+                                    "type": "button",
+                                    "entity": "switch.shelly_shsw_pm_84cca8a8515f",
+                                    "name": "M\u00eda Mar\u00eda",
                                     "icon": "mdi:dome-light"
                                 },
                                 {
@@ -84,13 +93,15 @@
                                     },
                                     "entity": "switch.sveppalampi",
                                     "name": "Sveppalampi",
-                                    "icon": "hass:lamp",
-                                    "icon_height": "102px"
+                                    "icon": "hass:lamp"
                                 },
                                 {
-                                    "type": "light",
-                                    "entity": "light.shelly_shdm_1_d0e25b",
-                                    "name": "M\u00eda Mar\u00eda",
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.shelly_shsw_1_8caab50615bc",
+                                    "name": "Gangur",
                                     "icon": "mdi:dome-light"
                                 }
                             ]
@@ -125,6 +136,38 @@
                             ]
                         },
                         {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "entity": "switch.shelly_shsw_pm_84cca8a8529f",
+                                    "name": "Elena Rut",
+                                    "icon": "mdi:dome-light"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "entity": "switch.on_off_plug_in_unit_8",
+                                    "show_state": false,
+                                    "icon": "mdi:desk-lamp",
+                                    "name": "Elena Rut - lampi"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
                             "type": "light",
                             "entity": "light.badspegill",
                             "icon": "mdi:mirror"
@@ -132,7 +175,11 @@
                         {
                             "type": "media-control",
                             "entity": "media_player.tv_stofa",
-                            "name": "TV (Stofa)"
+                            "name": "Shield"
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.stofatv"
                         }
                     ]
                 },
@@ -154,23 +201,23 @@
                             },
                             "entities": [
                                 {
-                                    "entity": "sensor.mi_temperature_stofa",
+                                    "entity": "sensor.ble_temperature_stofa",
                                     "name": "Stofa"
                                 },
                                 {
-                                    "entity": "sensor.mi_temperature_elena_rut",
+                                    "entity": "sensor.ble_temperature_elena_rut",
                                     "name": "Elena Rut"
                                 },
                                 {
-                                    "entity": "sensor.mi_temperature_mia_maria",
+                                    "entity": "sensor.ble_temperature_mia_maria",
                                     "name": "M\u00eda Mar\u00eda"
                                 },
                                 {
-                                    "entity": "sensor.mi_temperature_svefno",
+                                    "entity": "sensor.ble_temperature_svefno",
                                     "name": "Svefn\u00f3"
                                 },
                                 {
-                                    "entity": "sensor.mi_temperature_geymsla",
+                                    "entity": "sensor.ble_temperature_geymsla",
                                     "name": "Geymsla"
                                 },
                                 {
@@ -195,23 +242,23 @@
                             },
                             "entities": [
                                 {
-                                    "entity": "sensor.mi_humidity_stofa",
+                                    "entity": "sensor.ble_humidity_stofa",
                                     "name": "Stofa"
                                 },
                                 {
-                                    "entity": "sensor.mi_humidity_elena_rut",
+                                    "entity": "sensor.ble_humidity_elena_rut",
                                     "name": "Elena Rut"
                                 },
                                 {
-                                    "entity": "sensor.mi_humidity_mia_maria",
+                                    "entity": "sensor.ble_humidity_mia_maria",
                                     "name": "M\u00eda Mar\u00eda"
                                 },
                                 {
-                                    "entity": "sensor.mi_humidity_svefno",
+                                    "entity": "sensor.ble_humidity_svefno",
                                     "name": "Svefn\u00f3"
                                 },
                                 {
-                                    "entity": "sensor.mi_humidity_geymsla",
+                                    "entity": "sensor.ble_humidity_geymsla",
                                     "name": "Geymsla"
                                 },
                                 {
@@ -225,16 +272,98 @@
                             ]
                         },
                         {
+                            "title": "Svalir",
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.svalir"
+                                    ],
+                                    "line_color": "blue",
+                                    "line_width": 8,
+                                    "font_size": 75,
+                                    "name": "Hiti"
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        "sensor.svalir_2"
+                                    ],
+                                    "name": "Raki",
+                                    "line_color": "#e74c3c",
+                                    "line_width": 8,
+                                    "font_size": 75
+                                }
+                            ]
+                        },
+                        {
                             "type": "entities",
                             "entities": [
                                 {
                                     "entity": "binary_sensor.svalir_hurdaskynjari"
                                 },
                                 {
+                                    "entity": "binary_sensor.openclose_25"
+                                },
+                                {
                                     "entity": "binary_sensor.openclose_24",
                                     "icon": "mdi:snowflake"
                                 }
                             ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.processor_use_percent",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 30,
+                                                "red": 60
+                                            }
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.memory_use_percent",
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 40,
+                                                "red": 75
+                                            }
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.disk_use_percent_home",
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 45,
+                                                "red": 75
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.last_boot",
+                                            "name": "Last reboot"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "title": "Home Assistant status"
                         },
                         {
                             "type": "custom:battery-state-card",
@@ -245,23 +374,23 @@
                             ],
                             "entities": [
                                 {
-                                    "entity": "sensor.mi_battery_stofa",
+                                    "entity": "sensor.ble_battery_stofa",
                                     "name": "Stofa"
                                 },
                                 {
-                                    "entity": "sensor.mi_battery_elena_rut",
+                                    "entity": "sensor.ble_battery_elena_rut",
                                     "name": "Elena Rut"
                                 },
                                 {
-                                    "entity": "sensor.mi_battery_mia_maria",
+                                    "entity": "sensor.ble_battery_mia_maria",
                                     "name": "M\u00eda Mar\u00eda"
                                 },
                                 {
-                                    "entity": "sensor.mi_battery_svefno",
+                                    "entity": "sensor.ble_battery_svefno",
                                     "name": "Svefn\u00f3"
                                 },
                                 {
-                                    "entity": "sensor.mi_battery_geymsla",
+                                    "entity": "sensor.ble_battery_geymsla",
                                     "name": "Geymsla"
                                 },
                                 {
@@ -301,6 +430,10 @@
                                     "name": "Svalahur\u00f0 (hur\u00f0askynjari)"
                                 },
                                 {
+                                    "entity": "sensor.openclose_25_battery_level",
+                                    "name": "Svalalokun styttri hli\u00f0 (hur\u00f0askynjari)"
+                                },
+                                {
                                     "entity": "sensor.openclose_24_battery_level",
                                     "name": "Frystir geymsla (hur\u00f0askynjari)"
                                 }
@@ -316,22 +449,26 @@
                                 },
                                 {
                                     "entity": "sensor.shelly_shsw_1_e098068cebbf_rssi",
-                                    "name": "Eldh\u00fas"
+                                    "name": "Eldh\u00fas - vinnulj\u00f3s"
                                 },
                                 {
-                                    "entity": "sensor.shelly_shdm_1_d0df53_rssi",
-                                    "name": "Stofa (dimmer)"
+                                    "entity": "sensor.shelly_shsw_pm_84cca8a8503e_rssi",
+                                    "name": "Eldh\u00fas - sk\u00e1palj\u00f3s"
+                                },
+                                {
+                                    "entity": "sensor.shelly_shsw_pm_f4cfa2e37e84_rssi",
+                                    "name": "Stofa"
                                 },
                                 {
                                     "entity": "sensor.shelly_shsw_1_8caab50615bc_rssi",
                                     "name": "Gangur"
                                 },
                                 {
-                                    "entity": "sensor.shelly_shdm_1_d0e099_rssi",
+                                    "entity": "sensor.shelly_shsw_pm_84cca8a8529f_rssi",
                                     "name": "Elena Rut"
                                 },
                                 {
-                                    "entity": "sensor.shelly_shdm_1_d0e25b_rssi",
+                                    "entity": "sensor.shelly_shsw_pm_84cca8a8515f_rssi",
                                     "name": "M\u00eda Mar\u00eda"
                                 },
                                 {
@@ -344,6 +481,29 @@
                                 }
                             ],
                             "title": "Shelly - WiFi styrkur"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.canon_ts6300_series"
+                                },
+                                {
+                                    "entity": "sensor.canon_ts6300_series_black_bk"
+                                },
+                                {
+                                    "entity": "sensor.canon_ts6300_series_black_pgbk"
+                                },
+                                {
+                                    "entity": "sensor.canon_ts6300_series_cyan"
+                                },
+                                {
+                                    "entity": "sensor.canon_ts6300_series_magenta"
+                                },
+                                {
+                                    "entity": "sensor.canon_ts6300_series_yellow"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -353,6 +513,10 @@
                     "icon": "hass:weather-snowy",
                     "badges": [],
                     "cards": [
+                        {
+                            "type": "weather-forecast",
+                            "entity": "weather.alalaekur_15"
+                        },
                         {
                             "type": "vertical-stack",
                             "cards": [
@@ -366,10 +530,6 @@
                                         {
                                             "entity": "sensor.hellisheidi_veghiti",
                                             "icon": "hass:road-variant"
-                                        },
-                                        {
-                                            "entity": "sensor.hellisheidi_snjodypt",
-                                            "icon": "mdi:snowflake"
                                         }
                                     ]
                                 },
@@ -427,45 +587,6 @@
                             "type": "iframe",
                             "url": "https://embed.windy.com/embed2.html?lat=63.739&lon=-21.193&detailLat=64.094&detailLon=-21.577&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=m%2Fs&metricTemp=%C2%B0C&radarRange=-1",
                             "aspect_ratio": "90%"
-                        },
-                        {
-                            "type": "weather-forecast",
-                            "entity": "weather.alalaekur_15"
-                        },
-                        {
-                            "title": "Svalir",
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        "sensor.svalir"
-                                    ],
-                                    "line_color": "blue",
-                                    "line_width": 8,
-                                    "font_size": 75,
-                                    "name": "Hiti"
-                                },
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        "sensor.svalir_2"
-                                    ],
-                                    "name": "Raki",
-                                    "line_color": "#e74c3c",
-                                    "line_width": 8,
-                                    "font_size": 75
-                                },
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        "sensor.svalir_3"
-                                    ],
-                                    "name": "Loft\u00fer\u00fdstingur",
-                                    "line_width": 8,
-                                    "font_size": 75
-                                }
-                            ]
                         }
                     ]
                 }

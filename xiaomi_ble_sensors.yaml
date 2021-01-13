@@ -1,0 +1,14 @@
+period: 60
+batt_entities: true
+discovery: false
+devices:
+  - mac: '58:2D:34:30:E4:57'
+    name: 'Stofa'
+  - mac: '58:2D:34:31:9F:D7'
+    name: 'Elena Rut'
+  - mac: '58:2D:34:31:A8:D2'
+    name: 'Mía María'
+  - mac: '58:2D:34:30:E5:17'
+    name: 'Svefnó'
+  - mac: '58:2D:34:30:F7:22'
+    name: 'Geymsla'

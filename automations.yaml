@@ -32,7 +32,7 @@
     domain: binary_sensor
     for:
       hours: 0
-      minutes: 2
+      minutes: 3
       seconds: 0
   condition: []
   action:
@@ -97,4 +97,22 @@
     data:
       title: Frystir opinn!
       message: Hver á að loka frystinum? Á ÉG AÐ GERA ÞAÐ?
+  mode: single
+- id: '1610314013047'
+  alias: Turn on skápaljós if off in the morning
+  description: ''
+  trigger:
+  - platform: time
+    at: '6:30'
+  condition:
+  - condition: device
+    type: is_off
+    device_id: b2d6f3ffc4d98aba65de9a7767f24d38
+    entity_id: switch.shelly_shsw_pm_84cca8a8503e
+    domain: switch
+  action:
+  - type: turn_on
+    device_id: b2d6f3ffc4d98aba65de9a7767f24d38
+    entity_id: switch.shelly_shsw_pm_84cca8a8503e
+    domain: switch
   mode: single
