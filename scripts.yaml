@@ -1,0 +1,12 @@
+leaf_charge:
+  alias: Start charging
+  sequence:
+    - service: nissan_leaf.start_charge
+      data:
+        vin: !secret leaf_vin
+leaf_update:
+  alias: Update status
+  sequence:          
+    - service: nissan_leaf.update
+      data:
+        vin: !secret leaf_vin

@@ -179,7 +179,162 @@
                         },
                         {
                             "type": "media-control",
-                            "entity": "media_player.stofatv"
+                            "entity": "media_player.samsung_ue46f6400"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "binary_sensor.leaf1eini_charging_status",
+                                    "icon": "mdi:ev-station",
+                                    "style": {
+                                        "background-color": "rgba(0, 0, 0, 0.3)",
+                                        "bottom": 0,
+                                        "font-size": "16px",
+                                        "left": 0,
+                                        "line-height": "50px",
+                                        "padding": "0 8px",
+                                        "transform": "initial",
+                                        "width": "100%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "confirmation": false,
+                                        "service": "script.leaf_charge"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.leaf1eini_charge",
+                                    "icon": "mdi:reload",
+                                    "style": {
+                                        "bottom": 0,
+                                        "color": "white",
+                                        "left": "45%",
+                                        "line-height": "32px",
+                                        "margin": "0px 0px -3px 0px",
+                                        "padding": "8px",
+                                        "transform": "initial"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "confirmation": false,
+                                        "service": "script.leaf_update"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "switch.leaf1eini_climate_control",
+                                    "icon": "mdi:fan",
+                                    "style": {
+                                        "bottom": 0,
+                                        "color": "white",
+                                        "line-height": "32px",
+                                        "margin": "5px 0px -3px 0px",
+                                        "padding": "8px",
+                                        "right": 0,
+                                        "transform": "initial"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle",
+                                        "confirmation": false
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "binary_sensor.leaf1eini_plug_status",
+                                    "style": {
+                                        "--paper-item-icon-color": "rgb(25,25,25,1)",
+                                        "left": 0,
+                                        "margin": "25px 25px",
+                                        "top": 0
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.leaf_range_ac",
+                                    "style": {
+                                        "font-size": "12px",
+                                        "color": "rgb(25,25,25,1)",
+                                        "line-height": "32px",
+                                        "margin": "1px 35px",
+                                        "pointer-events": "none",
+                                        "right": 0,
+                                        "text-shadow": "rgb(0, 0, 0, 0.2) 0px 0px 2px",
+                                        "top": 0,
+                                        "transform": "initial"
+                                    },
+                                    "type": "state-label"
+                                },
+                                {
+                                    "entity": "sensor.leaf_range",
+                                    "icon": "mdi:speedometer",
+                                    "style": {
+                                        "--paper-item-icon-color": "rgb(25,25,25,1)",
+                                        "line-height": "32px",
+                                        "margin": "5px 5px",
+                                        "right": 0,
+                                        "top": 0,
+                                        "transform": "initial"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.leaf_range",
+                                    "style": {
+                                        "font-size": "12px",
+                                        "color": "rgba(25,25,25,1)",
+                                        "line-height": "32px",
+                                        "margin": "30px 35px",
+                                        "pointer-events": "none",
+                                        "right": 0,
+                                        "text-shadow": "rgb(0, 0, 0, 0.2) 0px 0px 2px",
+                                        "top": 0,
+                                        "transform": "initial"
+                                    },
+                                    "type": "state-label"
+                                },
+                                {
+                                    "entity": "sensor.leaf_range",
+                                    "icon": "mdi:speedometer",
+                                    "style": {
+                                        "--paper-item-icon-color": "rgb(25,25,25)",
+                                        "line-height": "32px",
+                                        "margin": "33px 5px",
+                                        "right": 0,
+                                        "top": 0,
+                                        "transform": "initial"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.leaf1eini_charge",
+                                    "style": {
+                                        "color": "rgba(25,25,25,1)",
+                                        "font-size": "12px",
+                                        "line-height": "32px",
+                                        "margin": "58px 34px",
+                                        "pointer-events": "none",
+                                        "right": 0,
+                                        "text-shadow": "rgb(0, 0, 0, 0.2) 0px 0px 2px",
+                                        "top": 0,
+                                        "transform": "initial"
+                                    },
+                                    "type": "state-label"
+                                },
+                                {
+                                    "entity": "sensor.leaf_battery",
+                                    "style": {
+                                        "--paper-item-icon-color": "rgb(25,25,25,1)",
+                                        "margin": "60px 5px",
+                                        "right": 0,
+                                        "top": 0,
+                                        "transform": "initial"
+                                    },
+                                    "type": "state-icon"
+                                }
+                            ],
+                            "image": "local/images/nissanleaf.jpeg",
+                            "type": "picture-elements"
                         }
                     ]
                 },
@@ -404,6 +559,10 @@
                                 {
                                     "entity": "sensor.svalir_battery_level",
                                     "name": "Svalir"
+                                },
+                                {
+                                    "entity": "sensor.elena_lampi_rofi_battery_level",
+                                    "name": "Elena Rut - Lampi (rofi)"
                                 },
                                 {
                                     "entity": "sensor.eldhusbord_remote_battery_level",

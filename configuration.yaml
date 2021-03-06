@@ -11,18 +11,28 @@ tts:
 #   logs:
 #     custom_components.mitemp_bt: debug
 
+nissan_leaf:
+  username: !secret leaf_username
+  password: !secret leaf_password
+  region: "NE"
+  update_interval:
+    minutes: 30
+  update_interval_charging:
+    minutes: 15
+  update_interval_climate:
+    minutes: 5
+  force_miles: false
+
 media_player:
   - platform: androidtv
     name: TV (Stofa)
     host: 10.0.0.5
+    apps: 
+      org.samsonsen.radio.island: "Útvarpið"
+      is.siminn.tv: "Sjónvarp Símans"
 #  - platform: androidtv
 #    name: TV (Svefnó)
 #    host: 10.0.0.7
-
-samsungtv:
-  - host: 10.0.0.6
-
-
 
 yeelight:
   devices:
@@ -46,7 +56,7 @@ automation: !include automations.yaml
 shelly: !include shellies.yaml
 ble_monitor: !include xiaomi_ble_sensors.yaml
 sensor: !include_dir_merge_list sensors/
+script: !include scripts.yaml
 
 group: !include groups.yaml
-script: !include scripts.yaml
 scene: !include scenes.yaml

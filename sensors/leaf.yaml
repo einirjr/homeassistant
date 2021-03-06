@@ -1,0 +1,15 @@
+- platform: template
+  sensors:
+    leaf_state:
+      value_template: "Laden: {{ states('binary_sensor.leaf1eini_charging_status') }}"
+    leaf_range_ac: 
+      value_template: "Drægni með A/C: {{ states('sensor.leaf1eini_range_ac') }}"
+      unit_of_measurement: km
+    leaf_range: 
+      value_template: "Drægni: {{ states('sensor.leaf1eini_range') }}"
+      unit_of_measurement: km
+    leaf_battery:
+      friendly_name: "Accu"
+      unit_of_measurement: '%'
+      value_template: "{{ states('sensor.leaf1eini_charge') }}"
+      icon_template: "{%- if states.sensor.leaf1eini_charge.state >= '95' %}mdi:battery{%- elif states.sensor.leaf1eini_charge.state == '100' %}mdi:battery{%- elif states.sensor.leaf1eini_charge.state <= '15' %}mdi:battery-outline{% else %}mdi:battery-{{(states.sensor.leaf1eini_charge.state|float / 10)|round*10}}{%- endif %}"

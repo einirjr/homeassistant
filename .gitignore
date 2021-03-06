@@ -6,4 +6,5 @@
 /tts/
 /www/
 /custom_components
+/glances
 secrets.yaml
