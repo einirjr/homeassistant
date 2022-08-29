@@ -116,3 +116,29 @@
     entity_id: switch.shelly_shsw_pm_84cca8a8503e
     domain: switch
   mode: single
+- id: '1616632530027'
+  alias: Kveikja skrautljós á svölum
+  description: ''
+  trigger:
+  - platform: time
+    at: '19:30'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: cffc07a575f1ddb8e56850a9a67470e2
+    entity_id: switch.shelly_shsw_pm_f4cfa2e3b3e3
+    domain: switch
+  mode: single
+- id: '1616632577914'
+  alias: Slökkva skrautljós á svölum
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:30
+  condition: []
+  action:
+  - type: turn_off
+    device_id: cffc07a575f1ddb8e56850a9a67470e2
+    entity_id: switch.shelly_shsw_pm_f4cfa2e3b3e3
+    domain: switch
+  mode: single

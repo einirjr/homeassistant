@@ -20,7 +20,7 @@ nissan_leaf:
   update_interval_charging:
     minutes: 15
   update_interval_climate:
-    minutes: 5
+    minutes: 15
   force_miles: false
 
 media_player:
